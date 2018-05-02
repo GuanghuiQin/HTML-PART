@@ -6,11 +6,64 @@
 3. 域名跟网站名的区别：如guangui.com 为域名,www(特定服务器的名字）.guanghui.com为网站名。
    域名相当于一块地，而网站名相当于在上面盖的房子，可以随意建造。
    
-4. 统一资源定位符（Uniform Resource Locator)是一个全局地址，用于定位web上的任意资源以及获取资源的协议。
+4. 统一资源定位符（Uniform Resource Locator)是一个全局地址，用于定位web上的任意资源以及获取资源的协议。（应用相对链接连接同一网站的页面，而使用URL来连接其他网站上的页面。
 
 5. 协议部分告诉浏览器应当使用什么方法来获取资源（大多数情况下协议是http，另还有file等）；
    网站部分（由服务器名与域名组成）告诉浏览器要从互联网上的哪个计算机获取资源；
    绝对路径告诉服务器我们要找哪个页面。
    例： http://   www.guanghui.com   /index.html
    
-6.
+6. <a>标签：href = "index.html#guanghui" 可访问页面中id为guanghui的特定点。
+           target="_blank" ————打开新的窗口
+
+7. font-family  字体系列： 1>  Sans-serif 无衬线字体;    2>  Serif 有衬线字体；    3>  Courier 固定宽度；    4>  Cursive 看似手写；    5>  Fantasy 装饰性字体；
+
+8. 为页面增加Web字体： 在从CSSC中增加属性@font-face {font-family:"icomoon"(京东实例中提到的字体名称）;src:url……（下载后的字体中有相关css文件）}。
+
+9. font-style:斜体（italic） 和 倾斜文本（oblique） 无从控制，所以无需在意其差别。
+
+10.text-decoration:none  /  line-through  /  underline   /  overline  。
+
+11. HTML5新增标签（常用）：header/footer/article/nav/time/aside/section/video等。
+
+12.video{
+     controls（如果有这个属性，浏览器会为视频显示增加内置的控件）
+     autoplay （如果有这个属性，一旦加载视频就自动播放）
+     width="" height =""  (视频在页面中的宽高）
+     src=""
+     loop (如果有这个属性，播放结束后可自动重新播放）
+     poster （提供可选海报图像，视频未播放即显示该图像）
+   }
+  
+13.table
+   caption (caption-side:bottom/top)
+   thead  tr  th
+   tbody  tr  td
+   边框间距 border-spacing/ border-collapse(折叠边框）：collapse;
+   p:nth-child(even)/(2n)   偶数段
+   p:nth-child(odd)/(2n+1)  奇数段
+   rowspan:   行合并
+   colspan:   列合并
+   
+14.li
+   list-style-type: disc /circle /square /none;
+   list-style-image:url（……）；
+   
+15.表单！
+   浏览器加载页面————你输入数据————你提交表单————浏览器将数据打包并发送给服务器————Web服务器接收表单数据然后将数据传给一个服务器脚本进行处理————
+   服务器脚本处理后创建一个全新的html页面作为响应，返回给Web服务器————浏览器接收响应，并显示该html。
+   <form  action="(包含Web服务器的URL)"  method="GET（打包变量，把这些数据追加到URL后面，然后向服务器发送请求）/POST（打包表单变量，在后台把它们发送至服务器）"></form>GET/POST
+   input  type="text/ submit / radio 单选/ checkbox 复选/ password / number / range / color/ date / tel电话 / url / email"
+   textarea name=""   rows=""  cols="" 文本域
+   select>option 下拉菜单
+   lable 提供页面结构的更多信息
+   fieldset+legend 结合使用
+   input type="file" 文件输入
+   select后面增加multiple可变成多选菜单
+   placeholder属性 ————占位符（提示内容）
+   required属性 ————指示一个域是必要的
+   
+           
+           
+           
+           
